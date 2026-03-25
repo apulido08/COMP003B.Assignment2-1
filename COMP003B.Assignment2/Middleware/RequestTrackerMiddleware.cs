@@ -3,7 +3,7 @@
     public class RequestTrackerMiddleware
     {
         private readonly RequestDelegate _next;
-    }
+    
 
     public RequestTrackerMiddleware(RequestDelegate next)
         {
@@ -16,4 +16,4 @@
             await _next(context);
             Console.WriteLine($"[Response] {context.Response.StatusCode}");
         }
-}
+    } }
